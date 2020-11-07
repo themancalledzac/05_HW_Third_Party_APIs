@@ -1,30 +1,31 @@
-var currentDay = moment().format('dddd, MMMM Do'); 
-$("#currentDay").text(currentDay);
-
-console.log(currentDay);
-
+// Curent date for Jumbotron header
+var currentDay = moment().format('dddd, MMMM Do'); $("#currentDay").text(currentDay);
 // Get the current hour of the day using moment.js
 var currentMoment = moment();
-var data = currentMoment.format( 'kk' );
+var currentHour = parseInt(currentMoment.format("H"));
 
-// Option 1
-var currentHourOne = parseInt(currentMoment.format("H"));
+// // Option 2
+// var currentHourTwo = currentMoment.hour();
 
-// Option 2
-var currentHourTwo = currentMoment.hour();
-
-console.log( currentHourOne, currentHourTwo );
+console.log( currentHour );
 
 // FOR Loop over the hours of the day from (9am to 5pm) i = 9 to i <= 17
+for (let i = 9; i <= 17; i++) {
+        //      var i=9;
+        // var i = 9;
+        //      ElementID = "#hour-" + i;
+        //---------------DIV ID = '#hour-" + 1;"--------------------------------------------//
+        //---------------DIV ID 
+        //      Currently checking 9am < current hour
 
-//      var i=9;
-//      Element ID = "#hour-" + i;
-//      Currently checking 9am < current hour
-//      9am is in the past
+        //      9am is in the past
+        //      Option A - Select matching element - $( ElementID ).css( "background-color")
 
-//      Option A - Select matching element - $( Element ID ).css( "backgr")
+            // make css selectors like, .is-past, .is-present, .is-future
 
-//      Option B - Select matching element - $( Element ID ).css( "backgr")
+        //      Option B - Select matching element - $( ElementID ).addClass( "is-past")
+};
+
 
 // Add a click event ON A PARENT ELEMENT that can listen
 // to my save button clicks
@@ -40,4 +41,15 @@ console.log( currentHourOne, currentHourTwo );
 
 //  > localStorage.setItem( "hour-"+ theClickedHour, value );
 
-moment();
+
+
+// for (let i = 9; i <= 17; i++) {
+    // var time      
+    
+    // who knows that this means
+    // let row = $(`
+    //     <div id='time-slow-${i}' class='time-block row'>
+    //     <span class='hour time-column col-1'>
+    //         <span class='hour-display'>${currentMoment.format('hA')}</span>
+    //     </span>
+    //     </div>`)
