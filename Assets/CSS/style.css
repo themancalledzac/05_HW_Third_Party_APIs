@@ -79,6 +79,12 @@ textarea {
   color: white;
 }
 
+.saveBtn:hover {
+  font-size: 30px;
+  -webkit-box-shadow: 1px 1px 5px 0px #000000;
+  box-shadow: 1px 1px 5px 0px #000000;
+}
+
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
