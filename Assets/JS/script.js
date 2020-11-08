@@ -33,15 +33,6 @@ for (let i = 9; i <= 17; i++) {
 };
 
 
-// local storage
-// for (let notesIndex = 9; notesIndex <=17; notesIndex++) {
-//     let schedule = localStorage.getItem('hour-' + notesIndex);
-//     $('#hour${notesIndex}').text(schedule);
-//     if ($('#hours{notesIndex}').text() === null) {
-//         $('#hour${notesIndex}').text().empty();
-//     }
-// };
-
 // event listener on button PARENT ELEMENT '.Container'
 var btnContainerEl = $('.container');
     btnContainerEl.on('click', '.saveBtn', saveToStorage);
