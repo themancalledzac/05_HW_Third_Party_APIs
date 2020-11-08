@@ -4,7 +4,7 @@
 // Get the current hour of the day using moment.js
 var currentMoment = moment();
 // var currentDay = moment().format('dddd, MMMM Do'); $("#currentDay").text(currentDay);
-// ------------------ below code is cleaner--------------------------------------------------//
+// ------------------ below code is cleaner------------------------------------------------------//
 $("#currentDay").text(currentMoment.format('dddd, MMMM Do'));
 var currentHour = parseInt(currentMoment.format("H"));
 console.log( currentHour );
@@ -14,7 +14,7 @@ console.log( currentHour );
 
 // FOR Loop over the hours of the day from (9am to 5pm) i = 9 to i <= 17 ------------------------//
 for (let i = 9; i <= 17; i++) {
-    //---------------DIV ID = '#hour-" + 1;"-------------------------------------------------//
+    //---------------DIV ID = '#hour-" + 1;"-----------------------------------------------------//
     var elementId = $("#hour-" + i);
     $(elementId).attr('data-key', i);
     //---------------DIV ID 
@@ -27,17 +27,15 @@ for (let i = 9; i <= 17; i++) {
     if (i === currentHour) {
         $(elementId).addClass("present");
     }
-    //      Option A - Select matching element - $( ElementID ).css( "background-color")
-    //      Option B - Select matching element - $( ElementID ).addClass( "is-past")
     console.log(elementId);
 };
 
 
-// event listener on button PARENT ELEMENT '.Container'
+    // event listener on button PARENT ELEMENT '.Container'--------------------------------------//
 var btnContainerEl = $('.container');
     btnContainerEl.on('click', '.saveBtn', saveToStorage);
     
-    
+    // function to save click to local storage --------------------------------------------------//
 function saveToStorage(event) {
 
     event.preventDefault();
@@ -51,11 +49,11 @@ function saveToStorage(event) {
         // THEN I need to save the associated text for the associated hour.description
         //  GET the current hour from the 'event.target' (The clicked button)
         
-    let theClickedHour = $(this).parent('div').children('textarea').data('hour');
+    let theClickedHour = $(this).parent('div').children('span').children('textarea').data('time');
         console.log(theClickedHour);
         
         //  > var value = $(event.target).prev().val()
-    let value = $(this).parent('div').children('textarea').val();
+    let value = $(this).parent('div').children('span').children('textarea').val();
         
         //  > localStorage.setItem( "hour-"+ theClickedHour, value );
     localStorage.setItem('hour: ' + theClickedHour, value);
