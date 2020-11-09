@@ -28,7 +28,7 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: ;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -118,4 +118,11 @@ textarea {
   margin-top: 60px;
   font-size: 35px;
   height: 50%;
+}
+
+.topBar {
+  background-image: url("../Images/DSC_5434-2.jpg");
+  height: auto;
+  background-position: absolute;
+  opacity: 75%;
 }
