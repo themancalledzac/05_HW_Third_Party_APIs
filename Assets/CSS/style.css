@@ -106,6 +106,8 @@ textarea {
   background-position: absolute;
   opacity: 75%;
   bottom: 0px;
+  /* border-radius: 70px; */
+  border-width: 0;
 }
 
 .btmtext {
@@ -118,11 +120,4 @@ textarea {
   margin-top: 60px;
   font-size: 35px;
   height: 50%;
-}
-
-.topBar {
-  background-image: url("../Images/DSC_5434-2.jpg");
-  height: auto;
-  background-position: absolute;
-  opacity: 75%;
 }

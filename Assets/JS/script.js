@@ -63,16 +63,16 @@ function saveToStorage(event) {
 
 // local storage retreval? -----------probably need a for loop-----------------------------------//
 
+// for everytime we get saved data, we start with hour block 1, and move through the list--------//
 for (let ii = 9; ii <= 17; ii++) {
+        //----- savedData variable that holds the data, for each hour block(ii) -----------------//
     let savedData = localStorage.getItem('hour' + ii);
-
-    // from line
-    // textarea
-
+        //----- select each hour9-hour17 and adds text from our current savedData variable-------//
     $(`#hour${ii}`).text(savedData)
-
+        //----- if our current textarea has nothing written.......-------------------------------//
     if ($(`#hour${ii}`).text() === null) {
-        $(`#hour${ii}`).text().empty();
+        //----- we clear it's storage data ------------------------------------------------------//
+        $(`savedData`).text().empty();
     }
     
     // textarea data-time(ii).text(localStorage.getItem('hour' + ii))
