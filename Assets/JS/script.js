@@ -50,13 +50,31 @@ function saveToStorage(event) {
         //  GET the current hour from the 'event.target' (The clicked button)
         
     let theClickedHour = $(this).parent('div').children('span').children('textarea').data('time');
-        console.log(theClickedHour);
+        // console.log(theClickedHour);
         
         //  > var value = $(event.target).prev().val()
     let value = $(this).parent('div').children('span').children('textarea').val();
         
         //  > localStorage.setItem( "hour-"+ theClickedHour, value );
-    localStorage.setItem('hour: ' + theClickedHour, value);
+    localStorage.setItem('hour' + theClickedHour, value);
     console.log(localStorage);
 };
 
+
+// local storage retreval? -----------probably need a for loop-----------------------------------//
+
+for (let ii = 9; ii <= 17; ii++) {
+    let savedData = localStorage.getItem('hour' + ii);
+
+    //textarea
+
+    $(`#hour${ii}`).text(savedData)
+
+    if ($(`#hour${ii}`).text() === null) {
+        $(`#hour${ii}`).text().empty();
+    }
+    
+    // textarea data-time(ii).text(localStorage.getItem('hour' + ii))
+};
+
+console.log(localStorage);
