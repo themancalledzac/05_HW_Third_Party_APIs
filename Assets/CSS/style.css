@@ -96,3 +96,26 @@ textarea {
 
 .btn {
 }
+
+.card {
+  overflow: hidden;
+}
+
+.bottomImage {
+  height: auto;
+  background-position: absolute;
+  opacity: 75%;
+  bottom: 0px;
+}
+
+.btmtext {
+  color: black;
+  text-align: center;
+  height: 40%;
+}
+
+.btmTitle {
+  margin-top: 60px;
+  font-size: 35px;
+  height: 50%;
+}
