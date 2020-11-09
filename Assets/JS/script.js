@@ -49,11 +49,11 @@ function saveToStorage(event) {
         // THEN I need to save the associated text for the associated hour.description
         //  GET the current hour from the 'event.target' (The clicked button)
         
-    let theClickedHour = $(this).parent('div').children('span').children('textarea').data('time');
+    let theClickedHour = $(this).parent('div').children('div').children('textarea').data('time');
         // console.log(theClickedHour);
         
         //  > var value = $(event.target).prev().val()
-    let value = $(this).parent('div').children('span').children('textarea').val();
+    let value = $(this).parent('div').children('div').children('textarea').val();
         
         //  > localStorage.setItem( "hour-"+ theClickedHour, value );
     localStorage.setItem('hour' + theClickedHour, value);
@@ -66,7 +66,8 @@ function saveToStorage(event) {
 for (let ii = 9; ii <= 17; ii++) {
     let savedData = localStorage.getItem('hour' + ii);
 
-    //textarea
+    // from line
+    // textarea
 
     $(`#hour${ii}`).text(savedData)
 
